@@ -32,12 +32,12 @@ public class NanoHttpdServer implements HttpServer {
         public NanoHTTPD.Response serve(IHTTPSession session) {
             Request request = new Request();
 
+            request.setMethod(session.getMethod().toString());
+            request.setPath(session.getUri());
+            request.setHeaders(session.getHeaders());
+            request.setParams(session.getParms());
 
-
-            Method method = session.getMethod();
-            String uri = session.getUri();
-            System.out.println(method + " '" + uri + "' ");
-
+            request.dump();
 
             return new NanoHTTPD.Response("Hello world!");
         }
