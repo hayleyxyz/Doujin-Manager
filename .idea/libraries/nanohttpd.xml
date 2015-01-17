@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="nanohttpd">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../nanohttpd" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../nanohttpd/core/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../nanohttpd/core/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../nanohttpd/samples/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../nanohttpd/webserver/markdown-plugin/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../nanohttpd/webserver/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../nanohttpd/websocket/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../nanohttpd/websocket/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
