@@ -7,16 +7,16 @@ import java.util.Map;
  */
 public class Request {
 
-    protected String method;
+    protected Method method;
     protected String path;
     protected Map<String, String> headers;
     protected Map<String, String> params;
 
-    public String getMethod() {
+    public Method getMethod() {
         return method;
     }
 
-    public void setMethod(String method) {
+    public void setMethod(Method method) {
         this.method = method;
     }
 
@@ -60,5 +60,28 @@ public class Request {
         }
 
         System.out.println();
+    }
+
+    public enum Method {
+        GET,
+        PUT,
+        POST,
+        DELETE,
+        HEAD,
+        OPTIONS;
+
+        private Method() {
+
+        }
+
+        public static Method fromString(String methodString) {
+            for(Method method : values()) {
+                if(method.toString().equalsIgnoreCase(methodString)) {
+                    return method;
+                }
+            }
+
+            throw new IllegalArgumentException("Illegal method: " + methodString);
+        }
     }
 }

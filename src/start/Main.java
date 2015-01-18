@@ -15,7 +15,6 @@ public class Main {
         try {
             server.start();
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
         System.out.println("Server started, Hit Enter to stop.\n");
